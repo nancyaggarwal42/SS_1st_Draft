@@ -30,6 +30,6 @@ app.use('/api/quote',         quoteRoutes);
 app.use('/api/general-tasks', generalTaskRoutes);
 app.use('/api/todos', router);
 
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 app.listen(port, () => console.log('Server running on port 5000'));
