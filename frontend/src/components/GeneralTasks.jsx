@@ -102,7 +102,7 @@ export default function GeneralTasks() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/general-tasks')
+    axios.get('https://ss-1st-draft-1.onrender.com/api/general-tasks')
       .then(r => {
         setTasks(r.data.tasks);
         setStats({ total: r.data.total, completed: r.data.completed });
@@ -111,7 +111,7 @@ export default function GeneralTasks() {
       .finally(() => setLoading(false));
   }, []);
 
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
   const toggle = async (id) => {
     const { data } = await axios.patch(`${baseUrl}/api/general-tasks/${id}/complete`);
@@ -238,6 +238,11 @@ const s = {
   desc:      { fontSize: 12, color: '#4b5263', margin: 0, lineHeight: 1.6, flex: 1 },
   chip:      { marginTop: 4, padding: '7px 0', borderRadius: 8, fontSize: 12, fontWeight: 600, textAlign: 'center', border: '1px solid', letterSpacing: '0.02em', transition: 'all 0.2s' },
 
+  /* All done */
+  allDone:      { marginTop: 16, background: '#0a1a10', border: '1px solid #1b3a22', borderRadius: 14, padding: '22px 20px', textAlign: 'center' },
+  allDoneTitle: { fontSize: 16, fontWeight: 700, color: '#52b788', margin: '0 0 4px' },
+  allDoneSub:   { fontSize: 13, color: '#4b7a5a', margin: 0 },
+};
   /* All done */
   allDone:      { marginTop: 16, background: '#0a1a10', border: '1px solid #1b3a22', borderRadius: 14, padding: '22px 20px', textAlign: 'center' },
   allDoneTitle: { fontSize: 16, fontWeight: 700, color: '#52b788', margin: '0 0 4px' },
