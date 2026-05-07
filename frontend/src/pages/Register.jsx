@@ -74,7 +74,7 @@ export default function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '', age: '', gender: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
   const handleSubmit = async (e) => {
     e.preventDefault();

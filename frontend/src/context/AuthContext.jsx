@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [loading, setLoading] = useState(true);
-  const baseUrl = "https://serenity-steps-1st-draft-1-backend-1.onrender.com"
+  const baseUrl = "https://ss-1st-draft-1.onrender.com"
 
   useEffect(() => {
     if (token) {

@@ -448,7 +448,7 @@
 //                   className="tp-clear-btn"
 //                   onClick={async () => {
 //                     const completed = todos.filter(t => t.completed);
-//                     await Promise.all(completed.map(t => axios.delete(`http://localhost:5000/api/todos/${t._id}`)));
+//                     await Promise.all(completed.map(t => axios.delete(`http:///api/todos/${t._id}`)));
 //                     setTodos(prev => prev.filter(t => !t.completed));
 //                   }}
 //                 >
@@ -489,7 +489,7 @@ export default function Navbar() {
   const [loading,  setLoading]  = useState(false);
   const panelRef  = useRef(null);
   const inputRef  = useRef(null);
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
 
   useEffect(() => {
@@ -512,7 +512,7 @@ export default function Navbar() {
 
   const addTodo = async () => {
     if (!text.trim()) return;
-    const { data } = await axios.post('http://localhost:5000/api/todos', { text, time, priority });
+    const { data } = await axios.post('https://ss-1st-draft-1.onrender.com/api/todos', { text, time, priority });
     setTodos(prev => [data, ...prev]);
     setText('');
     setTime('');
@@ -520,12 +520,12 @@ export default function Navbar() {
   };
 
   const toggle = async (id) => {
-    const { data } = await axios.patch(`http://localhost:5000/api/todos/${id}/toggle`);
+    const { data } = await axios.patch(`https://ss-1st-draft-1.onrender.com/api/todos/${id}/toggle`);
     setTodos(prev => prev.map(t => t._id === id ? data : t));
   };
 
   const remove = async (id) => {
-    await axios.delete(`http://localhost:5000/api/todos/${id}`);
+    await axios.delete(`https://ss-1st-draft-1.onrender.com/api/todos/${id}`);
     setTodos(prev => prev.filter(t => t._id !== id));
   };
 
@@ -841,7 +841,7 @@ export default function Navbar() {
                   className="tp-clear-btn"
                   onClick={async () => {
                     const completed = todos.filter(t => t.completed);
-                    await Promise.all(completed.map(t => axios.delete(`http://localhost:5000/api/todos/${t._id}`)));
+                    await Promise.all(completed.map(t => axios.delete(`https://ss-1st-draft-1.onrender.com/api/todos/${t._id}`)));
                     setTodos(prev => prev.filter(t => !t.completed));
                   }}
                 >

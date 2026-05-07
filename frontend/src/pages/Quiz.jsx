@@ -74,7 +74,7 @@ export default function Quiz() {
     else submit();
   };
 
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
   const submit = async () => {
     const { data } = await axios.post(`${baseUrl}/api/addiction/quiz`, { answers });

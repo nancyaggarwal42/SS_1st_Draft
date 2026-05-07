@@ -83,7 +83,7 @@ export default function RewardStrip() {
   const navigate = useNavigate();
   const [data,    setData]    = useState(null);
   const [loading, setLoading] = useState(true);
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
 
   useEffect(() => {

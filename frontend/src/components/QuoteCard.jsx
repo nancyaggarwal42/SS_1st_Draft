@@ -46,7 +46,7 @@ export default function QuoteCard() {
   const [quote,   setQuote]   = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
 
   useEffect(() => {

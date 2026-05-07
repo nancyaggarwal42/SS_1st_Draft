@@ -102,7 +102,7 @@ export default function GeneralTasks() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/general-tasks')
+    axios.get('https://ss-1st-draft-1.onrender.com/api/general-tasks')
       .then(r => {
         setTasks(r.data.tasks);
         setStats({ total: r.data.total, completed: r.data.completed });
@@ -111,7 +111,7 @@ export default function GeneralTasks() {
       .finally(() => setLoading(false));
   }, []);
 
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
   const toggle = async (id) => {
     const { data } = await axios.patch(`${baseUrl}/api/general-tasks/${id}/complete`);

@@ -204,7 +204,7 @@ export default function Tasks() {
   const [data,    setData]    = useState(null);
   const [loading, setLoading] = useState(true);
   const [error,   setError]   = useState('');
-  const baseUrl = 'https://serenity-steps-1st-draft-1-backend-1.onrender.com'
+  const baseUrl = 'https://ss-1st-draft-1.onrender.com'
 
 
   useEffect(() => {
@@ -216,7 +216,7 @@ export default function Tasks() {
 
   const toggle = async (taskId, addiction) => {
     try {
-      const { data: updated } = await axios.patch(`http://localhost:5000/api/tasks/${taskId}/complete`);
+      const { data: updated } = await axios.patch(`https://ss-1st-draft-1.onrender.com/api/tasks/${taskId}/complete`);
       setData(prev => {
         const newGrouped = { ...prev.grouped };
         newGrouped[addiction] = newGrouped[addiction].map(t => t._id === taskId ? updated : t);
