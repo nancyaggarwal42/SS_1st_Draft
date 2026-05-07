@@ -8,7 +8,7 @@ import taskRoutes from './routes/tasks.js';
 import rewardRoutes from './routes/rewards.js';
 import quoteRoutes       from './routes/quotes.js';
 import generalTaskRoutes from './routes/generalTasks.js';
-import router from './routes/todos.js';
+import router from './routes/Todos.js';
 
 dotenv.config();
 
