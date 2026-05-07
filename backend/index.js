@@ -14,7 +14,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: ['http://localhost:5173', 'https://ss-final-draft.netlify.app/'], credentials: true }));
+app.use(cors({ origin: ['http://localhost:5173', 'https://ss-final-draft.netlify.app'], credentials: true }));
 app.use(express.json());
 
 console.log('Mongo db', process.env.MONGO_URI)
