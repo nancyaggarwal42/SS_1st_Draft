@@ -243,3 +243,8 @@ const s = {
   allDoneTitle: { fontSize: 16, fontWeight: 700, color: '#52b788', margin: '0 0 4px' },
   allDoneSub:   { fontSize: 13, color: '#4b7a5a', margin: 0 },
 };
+  /* All done */
+  allDone:      { marginTop: 16, background: '#0a1a10', border: '1px solid #1b3a22', borderRadius: 14, padding: '22px 20px', textAlign: 'center' },
+  allDoneTitle: { fontSize: 16, fontWeight: 700, color: '#52b788', margin: '0 0 4px' },
+  allDoneSub:   { fontSize: 13, color: '#4b7a5a', margin: 0 },
+};
